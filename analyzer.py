@@ -3,7 +3,6 @@ from textstat import textstat
 from dotenv import load_dotenv
 from openai import OpenAI
 
-# Load API key
 load_dotenv()
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
@@ -11,7 +10,7 @@ client = OpenAI(
 )
 
 def analyze_text(url, article_text):
-    # Step 1: Readability
+
     scores = {
         "flesch_reading_ease": textstat.flesch_reading_ease(article_text),
         "flesch_kincaid_grade": textstat.flesch_kincaid_grade(article_text),
@@ -25,7 +24,7 @@ def analyze_text(url, article_text):
         "readability_explanation": "Scores based on standard readability formulas using textstat."
     }
 
-    # Step 2: LLM feedback
+
     prompt = f"""
 You're a documentation reviewer. Analyze the article below and provide:
 1. Structural feedback (with suggestions)

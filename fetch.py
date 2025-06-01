@@ -19,10 +19,9 @@ def load_cookies(context):
 def fetch_article_text(url):
     try:
         with sync_playwright() as p:
-            browser = p.chromium.launch(headless=False)  # Visible browser to solve challenges
+            browser = p.chromium.launch(headless=False) 
             context = browser.new_context()
 
-            # Load saved cookies if available
             load_cookies(context)
 
             page = context.new_page()
@@ -31,10 +30,8 @@ def fetch_article_text(url):
             print("Please solve any Cloudflare challenge manually in the browser window.")
             input("After you see the page fully loaded, press ENTER here to continue...")
 
-            # Save cookies for next time after manual verification
             save_cookies(context)
 
-            # Now page should be fully accessible, try to get article content
             content = page.query_selector('div.article-body, div.article-content')
             if content:
                 article_text = content.inner_text()

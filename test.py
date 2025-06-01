@@ -4,24 +4,23 @@ import hashlib
 from fetch import fetch_article_text
 from analyzer import analyze_text
 
-# Input
 url = input("Enter article URL: ").strip()
-print(f"\n📥 Fetching article from: {url}")
+print(f"\n Fetching article from: {url}")
 
 text, error = fetch_article_text(url)
 
 if error or not text.strip():
-    print(f"❌ Failed to fetch content: {error or 'No content found'}")
+    print(f" Failed to fetch content: {error or 'No content found'}")
     exit()
 
-print("\n📝 Article Preview:")
+print("\n Article Preview:")
 print(text[:300] + "...\n" if len(text) > 300 else text + "\n")
 
-# Analyze
-print("🔍 Analyzing article...")
+
+print(" Analyzing article...")
 readability_output, llm_feedback = analyze_text(url, text)
 
-# Save Output
+
 filename = hashlib.md5(url.encode()).hexdigest() + ".json"
 output_dir = "outputs"
 os.makedirs(output_dir, exist_ok=True)
@@ -37,4 +36,4 @@ output_data = {
 with open(filepath, "w", encoding="utf-8") as f:
     json.dump(output_data, f, indent=4, ensure_ascii=False)
 
-print(f"\n✅ Analysis saved to: {filepath}")
+print(f"\n Analysis saved to: {filepath}")
