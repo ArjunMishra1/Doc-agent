@@ -1,23 +1,29 @@
 # Doc-agent
-This project is a CLI-based tool that fetches the content of MoEngage documentation articles from a given URL, analyzes the article's readability, structure, completeness, and style, and saves the analysis output as JSON files in an output folder.
+This project is a CLI-based tool that fetches the content of documentation articles from a given URL, analyzes the article's readability, structure, completeness, and writing style using an LLM via OpenRouter API, and saves the results as JSON files.
 
 ---
 
 ## Features
-
-- Fetches article text content using Playwright and BeautifulSoup.
-- Performs readability analysis with multiple metrics using `textstat`.
-- Provides feedback on article structure, completeness, and style.
-- Saves analysis results to uniquely named JSON files based on the URL.
-- Modular design with separate scripts for fetching, analyzing, and main execution.
-
+- **Article Scraping with Playwright + BeautifulSoup**
+  - Bypasses Cloudflare via manual verification and cookies
+- **Readability Analysis** using `textstat`
+  - Includes Flesch Reading Ease, Gunning Fog Index, SMOG, ARI, and more
+- **LLM-Based Feedback** via OpenRouter
+  - Feedback on structure, completeness, and style
+  - Powered by models like `gpt-3.5-turbo`, `claude-3-sonnet`, or others via OpenRouter
+- **Output Saved as JSON**
+  - Each article analysis is stored in `outputs/` based on its URL hash
+- **Modular Codebase**
+  - Fetching, analyzing, and executing logic are separated for flexibility
 ---
 
 ## Project Structure
 
 - `test.py`: Main script that fetches the article, analyzes it, and saves the output.
-- `analyzer.py`: Contains the `analyze_text` function performing readability and feedback analysis.
+- `analyzer.py`: Analyzes readability and LLM-based feedback
 - `fetch.py`: Contains the `fetch_article_text` function using Playwright and BeautifulSoup to scrape article text.
+- `.env`: Stores API keys (excluded from Git)
+- `cookies.json`: Stores Cloudflare cookies (auto-generated)
 - `requirements.txt`: Lists all Python dependencies.
 - `outputs/`: Directory where JSON analysis results are saved.
 
