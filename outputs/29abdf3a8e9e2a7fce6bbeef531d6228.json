@@ -1,15 +1,15 @@
-[
-    {
+{
+    "url": "https://help.moengage.com/hc/en-us/articles/360057030512-Data-Centers-in-MoEngage",
+    "preview": "User Guide\nData\nKey Concepts\nData Centers in MoEngage\nMoEngage maintains multiple data centers, and you will be part of a specific data center when you sign up with us. We will provide you with the dashboard access URL, SDK, and REST API endpoints based on the data center.\nBefore you sign up, you can go ahead and consult your MoEngage Onboarding Manager to understand which Data Center will suit your needs. Once you have signed up, you can identify your Data Center from the Dashboard URL.\nRaise a",
+    "readability_analysis": {
         "scores": {
-            "flesch_reading_ease": -1232.3799999999999,
-            "flesch_kincaid_grade": 185.4,
-            "gunning_fog_index": 40.400000000000006,
-            "smog_index": 8.841846274778883,
-            "automated_readability_index": 360.58
+            "flesch_reading_ease": 31.104743589743606,
+            "flesch_kincaid_grade": 13.226923076923075,
+            "gunning_fog_index": 13.54871794871795,
+            "smog_index": 13.205437297517054,
+            "automated_readability_index": 14.883886054421772
         },
         "readability_explanation": "Scores based on standard readability formulas using textstat."
     },
-    "**Assessment:**\nThe article has basic structure but could benefit from clearer sections and logical flow.\n\n**Improvement Suggestions:**\n1. **Add Clear Headings**\n2. **Expand Content**\n3. **Use Examples**\n4. **Add Visuals**\n5. **Provide Troubleshooting**",
-    "The content may lack complete context. Add:\n1. Introductory context\n2. Step-by-step examples\n3. Clarify terms\n4. Add screenshots\n5. FAQ section",
-    "To improve readability:\n1. Use clear and concise language\n2. Maintain a customer-focused tone\n3. Provide actionable instructions\n4. Avoid jargon\n5. Rewrite ambiguous phrases"
-]
+    "llm_feedback": "Structural feedback (with suggestions):\n1. The article lacks a clear introduction or overview section that provides an overview of what the article is about and what readers can expect to learn.\n2. It would be helpful to have a more visually appealing structure with headings, subheadings, and bullet points to break up the text and make it easier to navigate.\n3. Consider adding a FAQ section at the end to address common questions users may have about data centers in MoEngage.\n\nCompleteness feedback:\n1. The article provides a comprehensive overview of data centers in MoEngage, including information on different data centers, their significance, signing up for region-specific data centers, and integrating SDKs with the corresponding data centers.\n2. The article covers the key concepts related to data centers in MoEngage and provides specific recommendations for users based on their data privacy requirements.\n\nWriting style feedback:\n1. The writing style is informative and technical, which is appropriate for a user guide on data centers.\n2. The use of bullet points and tables helps in presenting information in a clear and organized manner.\n3. The article could benefit from incorporating more user-friendly language and simplifying complex technical terms for better understanding by users who may not be familiar with data center concepts."
+}

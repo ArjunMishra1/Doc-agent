@@ -1,6 +1,17 @@
+import os
 from textstat import textstat
+from dotenv import load_dotenv
+from openai import OpenAI
+
+# Load API key
+load_dotenv()
+client = OpenAI(
+    base_url="https://openrouter.ai/api/v1",
+    api_key=os.getenv("OPENROUTER_API_KEY")
+)
 
 def analyze_text(url, article_text):
+    # Step 1: Readability
     scores = {
         "flesch_reading_ease": textstat.flesch_reading_ease(article_text),
         "flesch_kincaid_grade": textstat.flesch_kincaid_grade(article_text),
@@ -14,32 +25,29 @@ def analyze_text(url, article_text):
         "readability_explanation": "Scores based on standard readability formulas using textstat."
     }
 
-    structure_feedback = (
-        "**Assessment:**\nThe article has basic structure but could benefit from clearer sections and logical flow.\n\n"
-        "**Improvement Suggestions:**\n"
-        "1. **Add Clear Headings**\n"
-        "2. **Expand Content**\n"
-        "3. **Use Examples**\n"
-        "4. **Add Visuals**\n"
-        "5. **Provide Troubleshooting**"
-    )
+    # Step 2: LLM feedback
+    prompt = f"""
+You're a documentation reviewer. Analyze the article below and provide:
+1. Structural feedback (with suggestions)
+2. Completeness feedback
+3. Writing style feedback
 
-    completeness_feedback = (
-        "The content may lack complete context. Add:\n"
-        "1. Introductory context\n"
-        "2. Step-by-step examples\n"
-        "3. Clarify terms\n"
-        "4. Add screenshots\n"
-        "5. FAQ section"
-    )
+Article URL: {url}
 
-    style_feedback = (
-        "To improve readability:\n"
-        "1. Use clear and concise language\n"
-        "2. Maintain a customer-focused tone\n"
-        "3. Provide actionable instructions\n"
-        "4. Avoid jargon\n"
-        "5. Rewrite ambiguous phrases"
-    )
+Article Text:
+\"\"\"
+{article_text}
+\"\"\"
+"""
 
-    return readability_output, structure_feedback, completeness_feedback, style_feedback
+    try:
+        response = client.chat.completions.create(
+            model="openai/gpt-3.5-turbo",  
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.7
+        )
+        feedback = response.choices[0].message.content
+    except Exception as e:
+        feedback = f"Error while contacting OpenRouter API: {e}"
+
+    return readability_output, feedback

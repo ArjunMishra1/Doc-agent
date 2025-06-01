@@ -1,15 +1,15 @@
-[
-    {
+{
+    "url": "https://help.moengage.com/hc/en-us/articles/17461246281364-Overview-Data",
+    "preview": "User Guide\nData\nKey Concepts\nOverview - Data\nData is any information that you wish to store, analyze and track. When you onboard with MoEngage, one of the first things to do would be to integrate your data into MoEngage through various options. This data typically consists of user attributes and events used to create segments and run analytics and campaigns.\nTypes of Data\nlink\nUser\n- User data contains information about the user and is available in the User Profile for any user in the system. Fo",
+    "readability_analysis": {
         "scores": {
-            "flesch_reading_ease": -724.7799999999999,
-            "flesch_kincaid_grade": 114.6,
-            "gunning_fog_index": 40.400000000000006,
-            "smog_index": 8.841846274778883,
-            "automated_readability_index": 318.19
+            "flesch_reading_ease": 32.34374567474052,
+            "flesch_kincaid_grade": 13.876285219970342,
+            "gunning_fog_index": 16.077212061295107,
+            "smog_index": 14.90622815163357,
+            "automated_readability_index": 13.296352941176472
         },
         "readability_explanation": "Scores based on standard readability formulas using textstat."
     },
-    "**Assessment:**\nThe article has basic structure but could benefit from clearer sections and logical flow.\n\n**Improvement Suggestions:**\n1. **Add Clear Headings**\n2. **Expand Content**\n3. **Use Examples**\n4. **Add Visuals**\n5. **Provide Troubleshooting**",
-    "The content may lack complete context. Add:\n1. Introductory context\n2. Step-by-step examples\n3. Clarify terms\n4. Add screenshots\n5. FAQ section",
-    "To improve readability:\n1. Use clear and concise language\n2. Maintain a customer-focused tone\n3. Provide actionable instructions\n4. Avoid jargon\n5. Rewrite ambiguous phrases"
-]
+    "llm_feedback": "Structural Feedback:\n1. The article lacks a clear introduction or overview section that sets the context for the reader. It jumps straight into defining different types of data without providing an overall framework or purpose.\n   Suggestions: Add an introductory paragraph that explains the importance of data in the context of MoEngage and how it is used by users.\n\n2. The article could benefit from a more structured layout with clear headings and subheadings to guide the reader through the different sections.\n   Suggestions: Use a hierarchical structure with headings for each type of data, data operations, data management, data exports, etc.\n\nCompleteness Feedback:\n1. The article covers the key concepts related to data in MoEngage, such as user data, device data, event data, and auxiliary data. It also explains different data operations, data management, and data exports.\n   Suggestions: Consider adding more examples or use cases to illustrate how different types of data are used in MoEngage.\n\nWriting Style Feedback:\n1. The writing style is clear and straightforward, making it easy to understand the concepts related to data in MoEngage.\n   Suggestions: Consider breaking down complex concepts into simpler terms for readers who may not be familiar with data management systems.\n\nOverall, the article provides a good overview of data in MoEngage but could benefit from some structural improvements to make it more reader-friendly."
+}
