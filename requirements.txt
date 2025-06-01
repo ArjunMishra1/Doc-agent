@@ -1,0 +1,5 @@
+playwright
+bs4
+textstat
+openai 
+playwright-stealth

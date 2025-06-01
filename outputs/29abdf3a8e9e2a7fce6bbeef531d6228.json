@@ -1,0 +1,15 @@
+[
+    {
+        "scores": {
+            "flesch_reading_ease": -1232.3799999999999,
+            "flesch_kincaid_grade": 185.4,
+            "gunning_fog_index": 40.400000000000006,
+            "smog_index": 8.841846274778883,
+            "automated_readability_index": 360.58
+        },
+        "readability_explanation": "Scores based on standard readability formulas using textstat."
+    },
+    "**Assessment:**\nThe article has basic structure but could benefit from clearer sections and logical flow.\n\n**Improvement Suggestions:**\n1. **Add Clear Headings**\n2. **Expand Content**\n3. **Use Examples**\n4. **Add Visuals**\n5. **Provide Troubleshooting**",
+    "The content may lack complete context. Add:\n1. Introductory context\n2. Step-by-step examples\n3. Clarify terms\n4. Add screenshots\n5. FAQ section",
+    "To improve readability:\n1. Use clear and concise language\n2. Maintain a customer-focused tone\n3. Provide actionable instructions\n4. Avoid jargon\n5. Rewrite ambiguous phrases"
+]
